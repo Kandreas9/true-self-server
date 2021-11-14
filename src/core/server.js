@@ -3,6 +3,8 @@ import { Server } from 'socket.io';
 
 const port = process.env.PORT || 3000;
 
+console.log(process.env.PORT);
+
 /*---Start Server---*/
 const server = (app) => {
     const httpServer = createServer(app);
