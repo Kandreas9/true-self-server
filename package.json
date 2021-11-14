@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"local": "nodemon -r dotenv/config --exec babel-node src/index.js"
+		"local": "nodemon -r dotenv/config --exec babel-node src/index.js",
+		"build": "babel src -d dist",
+		"start": "npm run build && node -r dotenv/config dist/index.js"
 	},
 	"author": "Kandreas9",
 	"license": "ISC",
@@ -17,6 +19,7 @@
 		"socket.io": "^4.3.2"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.16.0",
 		"@babel/core": "^7.15.8",
 		"@babel/node": "^7.15.8",
 		"@babel/preset-env": "^7.15.8",
